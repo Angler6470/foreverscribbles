@@ -647,9 +647,13 @@
   window.FormHandler = window.FormHandler || { init: () => {} };
 </script>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-    <script src="order.js" defer></script>
+    <script>
+  // Acts like a class so "new FormHandler()" won’t crash
+  window.FormHandler = window.FormHandler || function(){};
+  window.FormHandler.prototype.init = function(){};
+</script>
+<script src="script.js"></script>
+<script src="order.js" defer></script>
 
 </body>
 </html>
