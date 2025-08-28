@@ -328,42 +328,49 @@
         </section>
 
         <!-- Order Forms Section -->
-        <section id="order-forms" class="section section-alt">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-label">🛒 Place Your Order</div>
-                    <h2 class="section-title">Let's Create Something <span class="highlight">Amazing</span></h2>
-                    <p class="section-subtitle">Complete your order in two simple steps. Payment first, then upload your artwork.</p>
-                </div>
-                
-                <div class="order-instructions">
-  <p>Select one of the packages above to continue securely to checkout.  
-  After payment, you’ll be redirected to upload your artwork.  
-  Simple and safe.</p>
-</div>
-                
-                <!-- Form 1: Payment & Details -->
-                <div class="form-container" id="form-1-container">
-                    <div class="form-card">
-                        <div class="form-header">
-                            <h3>Step 1: Order Details & Payment</h3>
-                            <p>Tell us about your order and complete payment to unlock the upload form.</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Form 2: Upload Artwork (Hidden until payment complete) -->
-                <div class="form-container hidden" id="form-2-container">
-                    <div class="form-card">
-                        <div class="form-header">
-                            <h3>Step 2: Upload Your Child's Artwork</h3>
-                            <p>Great! Now upload your child's beautiful artwork and we'll get started on your coloring book.</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                
+<section id="order-forms" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">🛒 Place Your Order</div>
+      <h2 class="section-title">Let's Create Something <span class="highlight">Amazing</span></h2>
+      <p class="section-subtitle">
+        Complete your order in two simple steps. Payment first, then upload your artwork.
+      </p>
+    </div>
+
+    <!-- NEW: layout wrapper -->
+    <div class="order-steps">
+      <!-- Card #1 -->
+      <div class="step-card">
+        <div class="step-top">
+          <span class="step-chip">1</span>
+          <h3>Step 1: Order Details &amp; Payment</h3>
+        </div>
+        <p>Tell us about your order and complete payment to unlock the upload form.</p>
+
+        <!-- Optional CTA that gently nudges back to packages (update the #id if your packages section uses a different id) -->
+        <div class="step-actions">
+          <a class="btn-pill" href="#pricing">Choose a package</a>
+        </div>
+      </div>
+
+      <!-- Card #2 -->
+      <div class="step-card">
+        <div class="step-top">
+          <span class="step-chip">2</span>
+          <h3>Step 2: Upload Artwork</h3>
+        </div>
+        <p>After payment, you’ll be redirected to the upload page automatically.</p>
+        <ul class="step-list">
+          <li>Accepted: JPG, PNG, PDF (max 25MB each)</li>
+          <li>Upload up to 50 pages of artwork</li>
+          <li>Look for “Payment verified” before the uploader appears</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+                    
                 <!-- Payment Success Message -->
                 <div class="success-message hidden" id="payment-success">
                     <div class="success-card">

@@ -1770,3 +1770,338 @@ body img:not(.fs-ba-img):not(.fs-lightbox-img){position:static;inset:auto;}
 .fs-lb-close{ position:absolute; top:8px; right:10px; width:36px; height:36px; border-radius:50%; border:none; font-size:20px; font-weight:700; line-height:36px; text-align:center; cursor:pointer; background:#ffffffcc; }
 .fs-lb-close:hover{ background:#ffffffee; }
 
+/* ===== Order section polish ===== */
+
+/* Order section polish */
+.section-header .muted {
+  color: #7a7f87;
+  margin-top: .25rem;
+}
+
+.form-container { margin: 1.5rem 0; }
+
+.form-card.step-card {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.07);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Gradient top accent */
+.form-card.step-card::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: 16px; right: 16px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff2fa0 0%, #7a2cff 100%);
+}
+
+.form-card .form-header h3 {
+  font-size: 1.25rem;
+  margin: 0 0 .25rem 0;
+}
+
+.form-card .form-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.form-card .form-body { margin-top: .75rem; }
+
+.mini-list { margin: 0; padding-left: 1.1rem; color: #49515a; }
+.mini-list li { margin: .25rem 0; }
+
+/* Disabled look for Step 2 (homepage only) */
+.step-card--disabled {
+  opacity: .85;
+  filter: grayscale(.04);
+}
+
+#order-forms {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+#order-forms .section-header {
+  text-align: center;
+  margin: 0 auto 20px;
+  max-width: 960px;
+}
+
+#order-forms .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f3f4f6;            /* soft pill behind "Place Your Order" */
+  color: #374151;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#order-forms .section-title {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.1;
+  margin: 14px 0 8px;
+}
+
+#order-forms .section-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 820px;
+}
+
+/* Small helper blurb under the subtitle */
+.order-note {
+  color: #6b7280;
+  margin: 14px auto 28px;
+  max-width: 820px;
+  text-align: center;
+}
+
+/* Card that says “Step 1: Order Details & Payment” */
+.step-card {
+  max-width: 820px;
+  margin: 0 auto 48px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px 26px;
+  box-shadow: 0 12px 30px rgba(24,24,27,.06);
+  border: 1px solid rgba(17,24,39,.06);
+}
+
+.step-card h3 {
+  font-size: clamp(18px, 2.2vw, 24px);
+  margin: 0 0 6px;
+}
+
+.step-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* Optional: soften the big grey background if section uses .section-alt */
+.section-alt {
+  background: #fafafa;
+}
+
+/* Tighten spacing on mobile */
+@media (max-width: 640px) {
+  #order-forms {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .step-card {
+    margin-bottom: 36px;
+    padding: 18px 18px;
+    border-radius: 16px;
+  }
+}
+
+/* =========================
+   ORDER FORMS – STEP CARDS
+   ========================= */
+#order-forms { padding: 40px 0 10px; }
+
+#order-forms .step-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 22px auto;
+  max-width: 760px;
+  box-shadow: 0 10px 26px rgba(28, 17, 59, 0.08);
+  border: 1px solid rgba(28, 17, 59, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top accent line */
+#order-forms .step-card::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff5c7a 0%, #a855f7 100%);
+}
+
+/* Card header */
+#order-forms .step-card h3 {
+  margin: 0 0 8px;
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.2;
+  color: #1c113b;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* Subtitle */
+#order-forms .step-card p {
+  margin: 0;
+  color: #6e6a86;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Bulleted notes inside a card (optional) */
+#order-forms .step-card ul {
+  margin: 12px auto 0;
+  padding-left: 20px;
+  max-width: 680px;
+  color: #58556b;
+}
+#order-forms .step-card li { margin: 6px 0; }
+
+/* Space above the subsection heading/label */
+#order-forms .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f8f5ff;
+  color: #7b57f2;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 auto 18px;
+}
+
+/* Tighter layout on mobile */
+@media (max-width: 640px) {
+  #order-forms { padding-top: 28px; }
+  #order-forms .step-card { padding: 18px; margin: 18px auto; }
+  #order-forms .step-card h3 { font-size: 20px; }
+  #order-forms .step-card p { font-size: 14px; }
+}
+
+/* ---------- Order steps layout & cards (polish) ---------- */
+.order-steps {
+  display: grid;
+  gap: 28px;
+  margin-top: 18px;
+}
+
+@media (min-width: 992px) {
+  .order-steps {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.step-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 22px 24px;
+  box-shadow: 0 8px 24px rgba(20, 15, 45, 0.06);
+  border: 1px solid rgba(20, 15, 45, 0.06);
+  position: relative;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+/* top accent line */
+.step-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -3px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff2fb3 0%, #9b5cff 100%);
+  opacity: 0.85;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(20, 15, 45, 0.10);
+  border-color: rgba(20, 15, 45, 0.10);
+}
+
+.step-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.step-chip {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff2fb3 0%, #9b5cff 100%);
+  box-shadow: 0 6px 14px rgba(255, 47, 179, 0.35);
+  flex: 0 0 auto;
+}
+
+.step-card h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.step-card p {
+  margin: 8px 0 10px;
+  color: #5a5a6a;
+}
+
+.step-list {
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+  color: #525268;
+}
+
+.step-list li + li {
+  margin-top: 6px;
+}
+
+/* CTA button inside the step card */
+.step-actions {
+  margin-top: 12px;
+}
+
+.btn-pill {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #ff2fb3 0%, #9b5cff 100%);
+  box-shadow: 0 10px 18px rgba(155, 92, 255, 0.28);
+  transition: transform 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+}
+
+.btn-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(155, 92, 255, 0.36);
+  opacity: 0.95;
+}
+
+/* Section header spacing tweaks so the block breathes nicely */
+#order-forms .section-header {
+  margin-bottom: 18px;
+}
+#order-forms .section-subtitle {
+  max-width: 760px;
+  margin: 8px auto 12px;
+  color: #666679;
+}
+
+/* Smooth scroll for the “Choose a package” anchor */
+html {
+  scroll-behavior: smooth;
+}
+
+
